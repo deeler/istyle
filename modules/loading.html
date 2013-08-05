@@ -1,0 +1,151 @@
+<section id="alerts">
+	<div class="page-header">
+		<h1>Loading</h1>
+	</div>
+
+	<h2>样式</h2>
+	<div class="bs-docs-example">
+		<div id="loaddemo" style="height:200px;"></div>
+		<br>
+		<button class="btn btn-primary" id="loaddemo-show">打开</button>
+		<button class="btn" id="loaddemo-hide">关闭</button>
+		<script>
+		;(function($){
+		    $('#loaddemo').loading()
+
+		    $('#loaddemo-show').click(function(){
+		    	$('#loaddemo').loading()
+		    })
+
+		    $('#loaddemo-hide').click(function(){
+		    	$('#loaddemo').loading('hide')
+		    })
+
+		    $('#loaddemo').bind('hide', function () {
+    			console.log(1);
+			})
+		})(jQuery);
+		</script>
+	</div>
+
+	<h2>用法</h2>
+	<p>启动实例：</p>
+	<pre class="prettyprint linenums">$("#loaddemo").loading()</pre>
+
+	<p>关闭实例：</p>
+	<pre class="prettyprint linenums">$("#loaddemo").loading('hide')</pre>
+
+	<h2>配置</h2>
+	<p>
+		配置项可以是HTML属性，也可JS设置，如：
+		<code>data-mask="true"</code>
+		或
+		<code>mask: true</code>
+	</p>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 120px;">配置项</th>
+				<th style="width: 120px;">类型</th>
+				<th style="width: 120px;">初始值</th>
+				<th>说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>show</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>默认执行实例show方法</td>
+			</tr>
+			<tr>
+				<td>mask</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>是否显示遮罩层</td>
+			</tr>
+			<tr>
+				<td>fadeout</td>
+				<td>boolean</td>
+				<td>false</td>
+				<td>关机实例时是否动画</td>
+			</tr>
+			<tr>
+				<td>zindex</td>
+				<td>number</td>
+				<td>1000</td>
+				<td>实例层级</td>
+			</tr>
+			<tr>
+				<td>offsetTop</td>
+				<td>number</td>
+				<td>0</td>
+				<td>实例模块top偏移值</td>
+			</tr>
+			<tr>
+				<td>offsetLeft</td>
+				<td>number</td>
+				<td>0</td>
+				<td>实例模块left偏移值</td>
+			</tr>
+			<tr>
+				<td>icon</td>
+				<td>boolean | string</td>
+				<td>true</td>
+				<td>true时显示图标；false时不显示图标； <br>
+					string时表示更改图标url
+				</td>
+			</tr>
+			<tr>
+				<td>style</td>
+				<td>css</td>
+				<td>''</td>
+				<td>附加或者重置样式</td>
+			</tr>
+			<tr>
+				<td rowspan="4">maskOffset</td>
+				<td>top</td>
+				<td>0</td>
+				<td>遮罩层top值</td>
+			</tr>
+			<tr>
+				<td>left</td>
+				<td>0</td>
+				<td>遮罩层left值</td>
+			</tr>
+			<tr>
+				<td>right</td>
+				<td>0</td>
+				<td>遮罩层right值</td>
+			</tr>
+			<tr>
+				<td>bottom</td>
+				<td>0</td>
+				<td>遮罩层bottom值</td>
+			</tr>
+			<tr>
+				<td>position</td>
+				<td>absolute | fixed</td>
+				<td>absolute</td>
+				<td>实例定位方式</td>
+			</tr>
+			<tr>
+				<td>text</td>
+				<td>string | html</td>
+				<td>数据加载中...</td>
+				<td>显示文本</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>方法</h2>
+	<h4><code>$().loading()</code></h4>
+	<p>
+		启动实例
+	</p>
+	<pre class="prettyprint linenums">$().loading()</pre>
+	<p>关闭实例</p>
+	<pre class="prettyprint linenums">$().loading('hide')</pre>
+
+
+</section>

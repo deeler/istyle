@@ -1,0 +1,324 @@
+<section id="tables">
+	<div class="page-header">
+		<h1>表格</h1>
+	</div>
+	<h2>基本样式</h2>
+	<div class="bs-docs-example">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Username</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Larry</td>
+					<td>the Bird</td>
+					<td>@twitter</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+<pre class="prettyprint linenums">
+&lt;table class="table"&gt;&lt;/table&gt;
+</pre>
+
+
+	<h2>隔行换色</h2>
+	<div class="bs-docs-example">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Username</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Larry</td>
+					<td>the Bird</td>
+					<td>@twitter</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+<pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;table class="table table-striped"&gt;&lt;/table&gt;
+</pre>
+
+	<h2>加边框</h2>
+	<div class="bs-docs-example">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Username</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan="2">1</td>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+				<tr>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@TwBootstrap</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td colspan="2">Larry the Bird</td>
+					<td>@twitter</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+<pre class="prettyprint linenums">
+&lt;table class="table table-bordered"&gt;&lt;/table&gt;
+</pre>
+
+   <h2>鼠标Hover效果</h2>
+	<div class="bs-docs-example">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Username</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td colspan="2">Larry the Bird</td>
+					<td>@twitter</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+<pre class="prettyprint linenums">
+&lt;table class="table table-hover"&gt;&lt;/table&gt;
+</pre>
+
+	<h2>小型表格</h2>
+	<div class="bs-docs-example">
+		<table class="table table-condensed">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Username</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td colspan="2">Larry the Bird</td>
+					<td>@twitter</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;table class="table table-condensed"&gt;&lt;/table&gt;
+</pre>
+
+	<h2>表格行样式</h2>
+<div class="bs-docs-example">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Class</th>
+				<th>Payment Taken</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="success">
+				<td>1</td>
+				<td><code>.success</code></td>
+				<td>01/04/2012</td>
+				<td>Approved</td>
+			</tr>
+			<tr class="error">
+				<td>2</td>
+				<td><code>.error</code></td>
+				<td>02/04/2012</td>
+				<td>Declined</td>
+			</tr>
+			<tr class="warning">
+				<td>3</td>
+				<td><code>.warning</code></td>
+				<td>03/04/2012</td>
+				<td>Pending</td>
+			</tr>
+			<tr class="info">
+				<td>4</td>
+				<td><code>.info</code></td>
+				<td>04/04/2012</td>
+				<td>Call in to confirm</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<pre class="prettyprint linenums">
+&lt;tr class="success"&gt;
+	&lt;td&gt;1&lt;/td&gt;
+	&lt;td&gt;TB - Monthly&lt;/td&gt;
+	&lt;td&gt;01/04/2012&lt;/td&gt;
+	&lt;td&gt;Approved&lt;/td&gt;
+&lt;/tr&gt;
+</pre>
+
+
+<h2>表格标签使用详解</h2>
+
+<table class="table table-bordered table-striped">
+	<colgroup>
+	<col class="span1">
+	<col class="span7"></colgroup>
+<thead>
+	<tr>
+		<th>Tag</th>
+		<th>Description</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>
+			<code>&lt;table&gt;</code>
+		</td>
+		<td>表格外层标签</td>
+	</tr>
+	<tr>
+		<td>
+			<code>&lt;thead&gt;</code>
+		</td>
+		<td>
+			表格头部
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<code>&lt;tbody&gt;</code>
+		</td>
+		<td>
+			表格内容区域
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<code>&lt;tr&gt;</code>
+		</td>
+		<td>
+			表行，内可使用
+			<code>&lt;td&gt;</code>
+			或
+			<code>&lt;th&gt;</code>
+			标签
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<code>&lt;td&gt;</code>
+		</td>
+		<td>使用在 <code>&lt;tr&gt;</code> 内的内容单元格</td>
+	</tr>
+	<tr>
+		<td>
+			<code>&lt;th&gt;</code>
+		</td>
+		<td>
+			通常使用在
+			<code>&lt;thead&gt;</code>
+			内作为表头单元格
+		</td>
+	</tr>
+</tbody>
+</table>
+<pre class="prettyprint linenums">
+&lt;table&gt;
+  &lt;thead&gt;
+	&lt;tr&gt;
+	  &lt;th&gt;...&lt;/th&gt;
+	  &lt;th&gt;...&lt;/th&gt;
+	&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+	&lt;tr&gt;
+	  &lt;td&gt;...&lt;/td&gt;
+	  &lt;td&gt;...&lt;/td&gt;
+	&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+</section>

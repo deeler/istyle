@@ -1,0 +1,95 @@
+<section id="querypage">
+	<div class="page-header">
+		<h1>携程页面选择</h1>
+	</div>
+	<h2>实例</h2>
+	<div class="bs-docs-example">
+		<a class="btn" href="javascript:;" id="spage02">点击触发</a>
+		<br>
+		<script>
+		;(function($){
+			$('#spage02').querypage({
+	            later: function(data){
+	                $('#spage02').html(data.name?data.name:data.id)
+	            }
+	        })
+		})(jQuery);
+		</script>
+	</div>
+	<pre class="prettyprint linenums">$('#spage02').querypage({
+    later: function(data){
+        $('#spage02').html(data.name?data.name:data.id)
+    }
+})</pre>
+	
+	<h2>用法</h2>
+	<p>启动实例：</p>
+	<pre class="prettyprint linenums">$("#demo").querypage({
+    // 以下配置
+})</pre>
+
+	<h2>配置</h2>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 120px;">配置项</th>
+				<th style="width: 120px;">类型</th>
+				<th style="width: 120px;">初始值</th>
+				<th>说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+			<tr>
+				<td>position</td>
+				<td>absolute/fixed</td>
+				<td>absolute</td>
+				<td>日历定位方式</td>
+			</tr>
+			<tr>
+				<td>container</td>
+				<td>string</td>
+				<td>body</td>
+				<td>提示信息Dom插入位置，默认为body下面，可设置显示在任意位置，如： <code>container: '#demoxx'</code></td>
+			</tr>
+			<tr>
+				<td>zindex</td>
+				<td>number</td>
+				<td>1100</td>
+				<td>日历层级</td>
+			</tr>
+			<tr>
+				<td>later</td>
+				<td>null | function</td>
+				<td>null</td>
+				<td>选择页面时执行操作，callback为页面相关信息json</td>
+			</tr>
+			<tr>
+				<td>url.channel</td>
+				<td>string (url)</td>
+				<td><code>http://svn.ui.sh.ctripcorp.com/p/getchannels.php?ismain=1&callback=querycpage.channel</code></td>
+				<td>取频道数据</td>
+			</tr>
+			<tr>
+				<td>url.mainpage</td>
+				<td>string (url)</td>
+				<td><code>http://svn.ui.sh.ctripcorp.com/p/getpages.php?ismain=1&callback=querycpage.page</code></td>
+				<td>取常用主流程页面数据</td>
+			</tr>
+			
+			<tr>
+				<td>url.getchannelpage</td>
+				<td>string (url)</td>
+				<td><code>http://svn.ui.sh.ctripcorp.com/p/getpages.php?cid={keyword}&callback=querycpage.page</code></td>
+				<td>由频道取页面数据</td>
+			</tr>
+			<tr>
+				<td>url.getpage</td>
+				<td>string (url)</td>
+				<td><code>http://svn.ui.sh.ctripcorp.com/p/getpageinfo.php?key={keyword}&callback=querycpage.page</code></td>
+				<td>由pagename或pageid取页面数据</td>
+			</tr>
+		</tbody>
+	</table>
+
+</section>

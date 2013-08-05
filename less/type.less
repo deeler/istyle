@@ -1,0 +1,549 @@
+// Body reset
+// -------------------------
+
+body {
+  margin: 0;
+  font-family: @baseFontFamily;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  color: @textColor;
+  background-color: @bodyBackground;
+}
+
+
+// Links
+// -------------------------
+
+a {
+  color: @linkColor;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: @linkColorHover;
+  text-decoration: underline;
+}
+
+
+
+//
+// Typography
+// --------------------------------------------------
+
+
+// Body text
+// -------------------------
+
+p {
+  margin: 0 0 @baseLineHeight / 2;
+}
+.lead {
+  margin-bottom: @baseLineHeight;
+  font-size: @baseFontSize * 1.5;
+  font-weight: 200;
+  line-height: @baseLineHeight * 1.5;
+}
+
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: 14px base font * 85% = about 12px
+small   { font-size: 85%; }
+
+strong  { font-weight: bold; }
+em      { font-style: italic; }
+cite    { font-style: normal; }
+
+// Utility classes
+.muted               { color: @grayLight; }
+a.muted:hover,
+a.muted:focus        { color: darken(@grayLight, 10%); }
+
+.text-warning        { color: @warningText; }
+a.text-warning:hover,
+a.text-warning:focus { color: darken(@warningText, 10%); }
+
+.text-error          { color: @errorText; }
+a.text-error:hover,
+a.text-error:focus   { color: darken(@errorText, 10%); }
+
+.text-info           { color: @infoText; }
+a.text-info:hover,
+a.text-info:focus    { color: darken(@infoText, 10%); }
+
+.text-success        { color: @successText; }
+a.text-success:hover,
+a.text-success:focus { color: darken(@successText, 10%); }
+
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  margin: (@baseLineHeight / 4) 0;
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  line-height: @baseLineHeight;
+  color: @headingsColor;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+  small {
+    font-weight: normal;
+    line-height: 1;
+    color: @grayLight;
+  }
+}
+
+h1,
+h2,
+h3 { line-height: @baseLineHeight * 1.75; }
+
+h1 { font-size: @baseFontSize * 2.25; } // ~32px
+h2 { font-size: @baseFontSize * 1.25; } // ~18px
+h3 { font-size: @baseFontSize * 1.14; } // ~16px
+h4 { font-size: @baseFontSize * 1.00; } // ~14px
+h5 { font-size: @baseFontSize; }
+h6 { font-size: @baseFontSize * 0.85; } // ~12px
+
+h1 small { font-size: @baseFontSize * 1.25; } // ~18px
+h2 small { font-size: @baseFontSize * 1.00; } // ~12px
+h3 small { font-size: @baseFontSize; }
+h4 small { font-size: @baseFontSize; }
+
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding-bottom: (@baseLineHeight / 2) - 1;
+  margin: @baseLineHeight 0 (@baseLineHeight * 1);
+  border-bottom: 1px solid @grayLighter;
+}
+
+
+
+// Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+ul, ol {
+  padding: 0;
+  margin: 0 0 @baseLineHeight / 2 25px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+li {
+  line-height: @baseLineHeight;
+}
+
+// Remove default list styles
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Single-line list items
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+  > li {
+    display: inline-block;
+    .ie7-inline-block();
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// Description Lists
+dl {
+  margin-bottom: @baseLineHeight;
+}
+dt,
+dd {
+  line-height: @baseLineHeight;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: @baseLineHeight / 2;
+}
+// Horizontal layout (like forms)
+.dl-horizontal {
+  .clearfix(); // Ensure dl clears floats if empty dd elements present
+  dt {
+    float: left;
+    width: @horizontalComponentOffset - 20;
+    clear: left;
+    text-align: right;
+    .text-overflow();
+  }
+  dd {
+    margin-left: @horizontalComponentOffset;
+  }
+}
+
+// MISC
+// ----
+
+// Horizontal rules
+hr {
+  margin: @baseLineHeight 0;
+  border: 0;
+  border-top: 1px solid @hrBorder;
+  border-bottom: 1px solid @white;
+}
+
+// Abbreviations and acronyms
+abbr[title],
+// Added data-* attribute to help out our tooltip plugin, per https://github.com/twitter/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @grayLight;
+}
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+// Blockquotes
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 @baseLineHeight;
+  border-left: 5px solid @grayLighter;
+  p {
+    margin-bottom: 0;
+    font-size: @baseFontSize * 1.25;
+    font-weight: 300;
+    line-height: 1.25;
+  }
+  small {
+    display: block;
+    line-height: @baseLineHeight;
+    color: @grayLight;
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+
+  // Float right with text-align: right
+  &.pull-right {
+    float: right;
+    padding-right: 15px;
+    padding-left: 0;
+    border-right: 5px solid @grayLighter;
+    border-left: 0;
+    p,
+    small {
+      text-align: right;
+    }
+    small {
+      &:before {
+        content: '';
+      }
+      &:after {
+        content: '\00A0 \2014';
+      }
+    }
+  }
+}
+
+// Quotes
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+// Addresses
+address {
+  display: block;
+  margin-bottom: @baseLineHeight;
+  font-style: normal;
+  line-height: @baseLineHeight;
+}
+
+
+
+
+//
+// Code (inline and blocK)
+// --------------------------------------------------
+
+
+// Inline and block code styles
+code,
+pre {
+  padding: 0 3px 2px;
+  #font > #family > .monospace;
+  font-size: @baseFontSize - 2;
+  color: @grayDark;
+  .border-radius(3px);
+}
+
+// Inline code
+code {
+  padding: 2px 4px;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  white-space: nowrap;
+}
+
+// Blocks of code
+pre {
+  display: block;
+  padding: (@baseLineHeight - 1) / 2;
+  margin: 0 0 @baseLineHeight / 2;
+  font-size: @baseFontSize - 1; // 14px to 13px
+  line-height: @baseLineHeight;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc; // fallback for IE7-8
+  border: 1px solid rgba(0,0,0,.15);
+  .border-radius(@baseBorderRadius);
+
+  // Make prettyprint styles more spaced out for readability
+  &.prettyprint {
+    margin-bottom: @baseLineHeight;
+  }
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    padding: 0;
+    color: inherit;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+// Enable scrollable blocks of code
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+
+
+//
+// Close icons
+// --------------------------------------------------
+
+
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: @baseLineHeight;
+  color: @black;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+  .opacity(20);
+  &:hover,
+  &:focus {
+    color: @black;
+    text-decoration: none;
+    cursor: pointer;
+    .opacity(40);
+  }
+}
+
+// Additional properties for button version
+// iOS requires the button element instead of an anchor tag.
+// If you want the anchor version, it requires `href="#"`.
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+
+//
+// Wells
+// --------------------------------------------------
+
+
+// Base class
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: @wellBackground;
+  border: 1px solid darken(@wellBackground, 7%);
+  .border-radius(@baseBorderRadius);
+  .box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+  blockquote {
+    border-color: #ddd;
+    border-color: rgba(0,0,0,.15);
+  }
+}
+
+// Sizes
+.well-large {
+  padding: 24px;
+  .border-radius(@borderRadiusLarge);
+}
+.well-small {
+  padding: 9px;
+  .border-radius(@borderRadiusSmall);
+}
+
+
+
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Quick floats
+.fr,
+.pull-right {
+  float: right;
+}
+
+.fl,
+.pull-left {
+  float: left;
+}
+
+// Toggling content
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+// Visibility
+.invisible {
+  visibility: hidden;
+}
+
+// For Affix plugin
+.affix {
+  position: fixed;
+}
+
+.tl{
+  text-align: left
+}
+.tc{
+  text-align: center
+}
+.tr{
+  text-align: right
+}
+
+.tov{
+  overflow:hidden; 
+  text-overflow:ellipsis; 
+  white-space:nowrap;
+}
+
+
+
+
+//
+// Component animations
+// --------------------------------------------------
+
+
+.fade {
+  opacity: 0;
+  .transition(opacity .15s linear);
+  &.in {
+    opacity: 1;
+  }
+}
+
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  .transition(height .35s ease);
+  &.in {
+    height: auto;
+  }
+}
+
+
+
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+.breadcrumb {
+  padding: 8px 15px;
+  margin: 0 0 @baseLineHeight;
+  list-style: none;
+  background-color: #f5f5f5;
+  .border-radius(@baseBorderRadius);
+  > li {
+    display: inline-block;
+    .ie7-inline-block();
+    text-shadow: 0 1px 0 @white;
+    > .divider {
+      padding: 0 5px;
+      color: #ccc;
+    }
+  }
+  > .active {
+    color: @grayLight;
+  }
+}
+
+
+
+//
+// Progress bars
+// --------------------------------------------------
+
+
+// THE BARS
+// --------
+
+// Outer container
+.progress {
+  overflow: hidden;
+  height: @baseLineHeight/2;
+  margin-bottom: @baseLineHeight;
+  #gradient > .vertical(#f5f5f5, #f9f9f9);
+  .box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
+  .border-radius(10px);
+}
+
+// Bar of progress
+.progress .bar {
+  width: 0%;
+  height: 100%;
+  color: @white;
+  float: left;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  #gradient > .vertical(#149bdf, #0480be);
+  .box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
+  .box-sizing(border-box);
+  .transition(width .6s ease);
+}
+.progress .bar + .bar {
+  .box-shadow(~"inset 1px 0 0 rgba(0,0,0,.15), inset 0 -1px 0 rgba(0,0,0,.15)");
+}
+

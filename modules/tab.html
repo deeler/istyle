@@ -1,0 +1,240 @@
+<section id="tabs">
+	<div class="page-header">
+		<h1>选项卡</h1>
+	</div>
+
+	<h2>实例</h2>
+	<div class="bs-docs-example">
+		<div class="tabbable" style="margin-bottom: 18px;">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#tab1" data-toggle="tab">新闻中心</a>
+				</li>
+				<li>
+					<a href="#tab2" data-toggle="tab">企业文化</a>
+				</li>
+				<li>
+					<a href="#tab3" data-toggle="tab">会员中心</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="tab1">
+					<p>新闻中心.</p>
+				</div>
+				<div class="tab-pane" id="tab2">
+					<p>企业文化.</p>
+				</div>
+				<div class="tab-pane" id="tab3">
+					<p>会员中心.</p>
+				</div>
+			</div>
+		</div>
+		<!-- /tabbable -->
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="tabbable"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+	&lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;新闻中心&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;企业文化&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+	&lt;div class="tab-pane active" id="tab1"&gt;
+	  &lt;p&gt;新闻中心.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class="tab-pane" id="tab2"&gt;
+	  &lt;p&gt;企业文化.&lt;/p&gt;
+	&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+	<h2>用法</h2>
+	<p>
+		使用任意标签data属性激活实例：
+		<code>data-toggle="tab"</code>
+		或
+		<code>data-toggle="pill"</code>
+	</p>
+		<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+    &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;首页&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#profile" data-toggle="tab"&gt;会员中心&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+	<p>
+		使用JS激活实例：
+	</p>
+	<pre class="prettyprint linenums">
+$('#myTab a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+})</pre>
+
+
+
+
+	<h2>方法</h2>
+	<h4><code>$().tab</code></h4>
+	<p>
+		添加属性
+		<code>data-target</code>
+		或
+		<code>href</code>
+		可以指定对应的Dom
+	</p>
+	<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs" id="myTab"&gt;
+    &lt;li class="active"&gt;&lt;a href="#home" data-toggle="tab"&gt;首页&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#profile" data-toggle="tab"&gt;会员中心&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane active" id="home"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="profile"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+	<h2>事件</h2>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 120px;">事件</th>
+				<th>描述</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>show</td>
+				<td>
+					激活一个选项卡且还没有执行其它操作时，可以使用
+					<code>event.target</code>
+					和
+					<code>event.relatedTarget</code>
+					进行一些操作
+				</td>
+			</tr>
+			<tr>
+				<td>shown</td>
+				<td>
+					激活一个选项卡之后，可以使用
+					<code>event.target</code>
+					和
+					<code>event.relatedTarget</code>
+					进行一些操作
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<pre class="prettyprint linenums">
+$('a[data-toggle="tab"]').on('shown', function (e) {
+    e.target // 当前
+    e.relatedTarget // 前一个
+})
+</pre>
+	
+	<hr>
+
+	<h2>实例 - 右</h2>
+	<div class="bs-docs-example">
+		<div class="tabbable tabs-right">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#rA" data-toggle="tab">新闻中心</a>
+				</li>
+				<li>
+					<a href="#rB" data-toggle="tab">企业文化</a>
+				</li>
+				<li>
+					<a href="#rC" data-toggle="tab">会员中心</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="rA">
+					<p>新闻中心的内容</p>
+				</div>
+				<div class="tab-pane" id="rB">
+					<p>企业文化的内容</p>
+				</div>
+				<div class="tab-pane" id="rC">
+					<p>会员中心的内容</p>
+				</div>
+			</div>
+		</div>
+		<!-- /tabbable -->
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-right"&gt;
+    ...
+&lt;/div&gt;
+</pre>
+
+	<h2>实例 - 下</h2>
+	<div class="bs-docs-example">
+		<div class="tabbable tabs-below">
+			<div class="tab-content">
+				<div class="tab-pane active" id="A">
+					<p>新闻中心的内容</p>
+				</div>
+				<div class="tab-pane" id="B">
+					<p>企业文化的内容</p>
+				</div>
+				<div class="tab-pane" id="C">
+					<p>会员中心的内容</p>
+				</div>
+			</div>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#A" data-toggle="tab">新闻中心</a>
+				</li>
+				<li>
+					<a href="#B" data-toggle="tab">企业文化</a>
+				</li>
+				<li>
+					<a href="#C" data-toggle="tab">会员中心</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /tabbable -->
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-below"&gt;
+    ...
+&lt;/div&gt;
+</pre>
+
+	<h2>实例 - 左</h2>
+	<div class="bs-docs-example">
+		<div class="tabbable tabs-left">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#lA" data-toggle="tab">新闻中心</a>
+				</li>
+				<li>
+					<a href="#lB" data-toggle="tab">企业文化</a>
+				</li>
+				<li>
+					<a href="#lC" data-toggle="tab">会员中心</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="lA">
+					<p>新闻中心的内容</p>
+				</div>
+				<div class="tab-pane" id="lB">
+					<p>企业文化的内容</p>
+				</div>
+				<div class="tab-pane" id="lC">
+					<p>会员中心的内容</p>
+				</div>
+			</div>
+		</div>
+		<!-- /tabbable -->
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-left"&gt;
+    ...
+&lt;/div&gt;
+</pre>
+
+</section>

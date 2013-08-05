@@ -1,0 +1,253 @@
+<section id="buttonDropdowns">
+	<div class="page-header">
+		<h1>下拉菜单</h1>
+	</div>
+	<h2>基本样式</h2>
+	<div class="bs-docs-example">
+		<div class="dropdown clearfix">
+			<ul class="dropdown-menu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+				<li>
+					<a tabindex="-1" href="#">新闻中心</a>
+				</li>
+				<li>
+					<a tabindex="-1" href="#">企业文化</a>
+				</li>
+				<li>
+					<a tabindex="-1" href="#">关于我们</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a tabindex="-1" href="#">会员中心</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;新闻中心&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;企业文化&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;关于我们&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;会员中心&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+	<h2>不可操作项</h2>
+	<div class="bs-docs-example">
+		<div class="dropdown clearfix">
+			<ul class="dropdown-menu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+				<li>
+					<a tabindex="-1" href="#">新闻中心</a>
+				</li>
+				<li class="disabled">
+					<a tabindex="-1" href="#">企业文化</a>
+				</li>
+				<li>
+					<a tabindex="-1" href="#">关于我们</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;新闻中心&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="disabled"&gt;&lt;a tabindex="-1" href="#"&gt;企业文化&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;关于我们&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+	<h2>多级菜单</h2>
+	<div class="bs-docs-example">
+		<div class="dropdown clearfix">
+			<ul class="dropdown-menu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+				<li>
+					<a tabindex="-1" href="#">新闻中心</a>
+				</li>
+				<li>
+					<a tabindex="-1" href="#">企业文化</a>
+				</li>
+				<li>
+					<a tabindex="-1" href="#">关于我们</a>
+				</li>
+				<li class="divider"></li>
+				<li class="dropdown-submenu">
+					<a tabindex="-1" href="#">会员中心</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a tabindex="-1" href="#">修改资料</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="#">重置密码</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="#">站内信</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="#">优惠券</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="#">注销登录</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu"&gt;
+    ...
+    &lt;li class="dropdown-submenu"&gt;
+        &lt;a tabindex="-1" href="#"&gt;会员中心&lt;/a&gt;
+        &lt;ul class="dropdown-menu"&gt;
+            ...
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h2>实例</h2>
+	<div class="bs-docs-example">
+		<div style="position:relative;">
+			<a class="dropdown-toggle" data-toggle="dropdown">会员中心</a>
+			<ul class="dropdown-menu">
+				<li>
+					<a href="#">修改资料</a>
+				</li>
+				<li>
+					<a href="#">重置密码</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#">注销</a>
+				</li>
+			</ul>
+		</div>
+		<br>
+		<div style="position:relative;">
+			<a class="btn btn-mini dropdown-toggle" data-toggle="dropdown">
+				会员中心
+				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">
+				<li>
+					<a href="#">修改资料</a>
+				</li>
+				<li>
+					<a href="#">重置密码</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#">注销</a>
+				</li>
+			</ul>
+		</div>
+		<div class="btn-toolbar">
+			<div class="btn-group">
+				<button class="btn dropdown-toggle" data-toggle="dropdown">
+					会员中心
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">修改资料</a>
+					</li>
+					<li>
+						<a href="#">重置密码</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">注销</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					会员中心
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">修改资料</a>
+					</li>
+					<li>
+						<a href="#">重置密码</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">注销</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-danger">会员中心</button>
+				<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">修改资料</a>
+					</li>
+					<li>
+						<a href="#">重置密码</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">注销</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="btn-group dropup">
+				<button class="btn btn-success">会员中心</button>
+				<button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">修改资料</a>
+					</li>
+					<li>
+						<a href="#">重置密码</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">注销</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+    &lt;a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+        会员中心&lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        ...
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-group"&gt;
+    &lt;button class="btn btn-danger"&gt;会员中心&lt;/button&gt;
+    &lt;button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"&gt;
+        &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        ...
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-group dropup"&gt;
+    &lt;button class="btn"&gt;会员中心&lt;/button&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+        &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        ...
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+</section>

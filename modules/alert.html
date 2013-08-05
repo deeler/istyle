@@ -1,0 +1,107 @@
+<section id="alerts">
+	<div class="page-header">
+		<h1>警告</h1>
+	</div>
+
+	<h2>样式</h2>
+	<div class="bs-docs-example">
+		<div class="alert">
+			<button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Warning!</strong>
+			酒店离开会的地点很近很方便，每次都会住这里，目前为止还比较。
+		</div>
+		<div class="alert alert-error">
+			<button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Oh snap!</strong>
+			酒店离开会的地点很近很方便，每次都会住这里，目前为止还比较。
+		</div>
+		<div class="alert alert-success">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<strong>Well done!</strong>
+			酒店离开会的地点很近很方便，每次都会住这里，目前为止还比较。
+		</div>
+		<div class="alert alert-info">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<strong>Heads up!</strong>
+			酒店离开会的地点很近很方便，每次都会住这里，目前为止还比较。
+		</div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="alert"&gt;
+    &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
+    &lt;strong&gt;Warning!&lt;/strong&gt; 酒店离开会的地点很近很方便，每次都会住这里，目前为止还比较。
+&lt;/div&gt;
+&lt;div class="alert alert-error"&gt;&lt;/div&gt;
+&lt;div class="alert alert-success"&gt;&lt;/div&gt;
+&lt;div class="alert alert-info"&gt;&lt;/div&gt;
+</pre>
+	
+
+	<div class="bs-docs-example">
+		<div class="alert alert-success fade in">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<h4>Well done!</h4>
+			<p><strong>Yes!</strong>
+			酒店离开会的地点很近很方便，每次都会住这里，目前为止还比较。</p>
+			<button class="btn btn-success">Done it !!</button>
+			<button class="btn" data-dismiss="alert">Close</button>
+		</div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="alert alert-success fade in"&gt;
+    &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
+    &lt;h4&gt;Well done!&lt;/h4&gt;
+    &lt;strong&gt;Yes!&lt;/strong&gt;
+    酒店离开会的地点很近很方便，每次都会住这里，目前为止还比较。
+&lt;/div&gt;
+</pre>
+
+
+	<h2>用法</h2>
+	<p>启动实例：</p>
+	<pre class="prettyprint linenums">$(".alert").alert()</pre>
+
+	<p>
+		添加属性
+		<code>data-dismiss="alert"</code>
+		关闭该实例
+	</p>
+	<pre class="prettyprint linenums">&lt;a class="close" data-dismiss="alert" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
+
+	<h2>方法</h2>
+	<h4><code>$().alert()</code></h4>
+	<p>
+		启动实例
+	</p>
+	<h4><code>.alert('close')</code></h4>
+	<p>关闭实例</p>
+	<pre class="prettyprint linenums">$(".alert").alert('close')</pre>
+
+	<h2>事件</h2>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 120px;">事件</th>
+				<th>描述</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>close</td>
+				<td>
+					关闭实例
+				</td>
+			</tr>
+			<tr>
+				<td>closed</td>
+				<td>
+					关闭实例之后执行
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<pre class="prettyprint linenums">
+$('#my-alert').bind('closed', function () {
+    
+})
+</pre>
+
+</section>

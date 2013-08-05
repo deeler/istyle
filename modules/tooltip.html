@@ -1,0 +1,155 @@
+<section id="tooltip">
+	<div class="page-header">
+		<h1>提示信息</h1>
+	</div>
+	
+	<h2>样式</h2>
+	<div class="bs-docs-example bs-docs-tooltip-examples" style="background-color: #f5f5f5;overflow:hidden">
+		<div class="tooltip top">
+			<div class="tooltip-inner">提示信息</div>
+			<div class="tooltip-arrow"></div>
+		</div>
+		<div class="tooltip right">
+			<div class="tooltip-inner">提示信息</div>
+			<div class="tooltip-arrow"></div>
+		</div>
+		<div class="tooltip bottom">
+			<div class="tooltip-inner">提示信息</div>
+			<div class="tooltip-arrow"></div>
+		</div>
+		<div class="tooltip left">
+			<div class="tooltip-inner">提示信息</div>
+			<div class="tooltip-arrow"></div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="tooltip top"&gt;
+    &lt;div class="tooltip-inner"&gt;提示信息&lt;/div&gt;
+    &lt;div class="tooltip-arrow"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="tooltip right"&gt;&lt;/div&gt;
+&lt;div class="tooltip bottom"&gt;&lt;/div&gt;
+&lt;div class="tooltip left"&gt;&lt;/div&gt;
+</pre>
+	
+	<h2>实例</h2>
+	<div class="bs-docs-example bs-docs-tooltip-examples2">
+		<a href="#" data-toggle="tooltip" data-placement="top" title="提示信息 top">提示信息 top</a> &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+		<a href="#" data-toggle="tooltip" data-placement="right" title="提示信息 right">提示信息 right</a> &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+		<a href="#" data-toggle="tooltip" data-placement="bottom" title="提示信息 bottom">提示信息 bottom</a> &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+		<a href="#" data-toggle="tooltip" data-placement="left" title="提示信息 left">提示信息 left</a>
+	</div>
+		<pre class="prettyprint linenums">
+&lt;a href="#" data-toggle="tooltip" data-placement="top" title="提示信息 top"&gt;提示信息 top&lt;/a&gt;
+
+&lt;a href="#" data-toggle="tooltip" data-placement="right" title="提示信息 right"&gt;提示信息 right&lt;/a&gt;
+
+&lt;a href="#" data-toggle="tooltip" data-placement="bottom" title="提示信息 bottom"&gt;提示信息 bottom&lt;/a&gt;
+
+&lt;a href="#" data-toggle="tooltip" data-placement="left" title="提示信息 left"&gt;提示信息 left&lt;/a&gt;
+</pre>
+
+
+	<h2>用法</h2>
+	<pre class="prettyprint linenums">$('#example').tooltip(options)</pre>
+	<p>
+		配置项可以是HTML属性，也可JS设置，如： <code>data-animation="true"</code> 或 <code>animation: true</code>
+		<br>
+		HTML属性需要添加 <code>data-</code> 头
+		，如 <code>data-animation=""</code>
+	</p>
+	<hr>
+
+	<h2>配置</h2>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 120px;">配置项</th>
+				<th style="width: 120px;">类型</th>
+				<th style="width: 120px;">初始值</th>
+				<th>说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>animation</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>是否使用css fade动画</td>
+			</tr>
+			<tr>
+				<td>html</td>
+				<td>boolean</td>
+				<td>false</td>
+				<td>
+					提示内容是否解析HTML，默认以文本方式解析
+				</td>
+			</tr>
+			<tr>
+				<td>placement</td>
+				<td>string | function</td>
+				<td>'top'</td>
+				<td>显示位置 - top | bottom | left | right</td>
+			</tr>
+			<tr>
+				<td>selector</td>
+				<td>string</td>
+				<td>false</td>
+				<td>
+					指定Target下的操作目标，默认是Target本身
+				</td>
+			</tr>
+			<tr>
+				<td>title</td>
+				<td>string | function</td>
+				<td>''</td>
+				<td>显示内容，如果不存在则取标签 <code>title</code> 内容</td>
+			</tr>
+			<tr>
+				<td>trigger</td>
+				<td>string</td>
+				<td>'hover focus'</td>
+				<td>
+					提示操作方式 - click | hover | focus | manual
+				</td>
+			</tr>
+			<tr>
+				<td>delay</td>
+				<td>number | object</td>
+				<td>0</td>
+				<td>
+					提示信息延迟时间，可分别设置显示和隐藏延迟，如下：<code>delay: { show: 500, hide: 100 }</code>
+				</td>
+			</tr>
+			<tr>
+				<td>container</td>
+				<td>string | false</td>
+				<td>false</td>
+				<td>
+					提示信息Dom插入位置，默认为Target下面，可设置显示在任意位置，如：<code>container: 'body'</code>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>方法</h2>
+	<h3><code>$(target).tooltip(options)</code></h3>
+	<h4>.tooltip('show')</h4>
+	<p>显示</p>
+	<pre class="prettyprint linenums">$(target).tooltip('show')</pre>
+	<h4>.tooltip('hide')</h4>
+	<p>隐藏</p>
+	<pre class="prettyprint linenums">$(target).tooltip('hide')</pre>
+	<h4>.tooltip('toggle')</h4>
+	<p>显示/隐藏</p>
+	<pre class="prettyprint linenums">$(target).tooltip('toggle')</pre>
+	<h4>.tooltip('destroy')</h4>
+	<p>隐藏并销毁</p>
+	<pre class="prettyprint linenums">$(target).tooltip('destroy')</pre>
+
+</section>
+
+<script>
+$('.bs-docs-tooltip-examples2 a').tooltip();
+</script>

@@ -1,0 +1,606 @@
+<section id="navs">
+	<div class="page-header">
+		<h1>日历</h1>
+	</div>
+	<h2>实例</h2>
+	<div class="bs-docs-example">
+		<input type="text" name="" id="calendardemo1">
+		<input type="text" name="" id="calendardemo2">
+		<input type="text" name="" id="calendardemo3">
+		<a href="javascript:;" id="calendardemo4"></a>
+		<br>
+		<script>
+		;(function($){
+			$("#calendardemo1").iCalendar()
+
+			$("#calendardemo2").iCalendar({
+		    	type: 'time',
+		    	placeholder: '05:12:35'
+		    })
+
+		    $("#calendardemo3").iCalendar({
+		    	type: 'datetime',
+		    	placeholder: '2013-05-21 14:25:45'
+		    })
+
+		    $("#calendardemo4").iCalendar({
+		    	targetTrigger: 'click'
+		    })
+		})(jQuery);
+		</script>
+	</div>
+	<pre class="prettyprint linenums">;(function($){
+    $("#calendardemo1").iCalendar()
+
+    $("#calendardemo2").iCalendar({
+    	type: 'time',
+    	placeholder: '05:12:35'
+    })
+
+    $("#calendardemo3").iCalendar({
+    	type: 'datetime',
+    	placeholder: '2013-05-21 14:25:45'
+    })
+
+    $("#calendardemo4").iCalendar({
+    	targetTrigger: 'click'
+    })
+})(jQuery);</pre>
+	
+	<h2>用法</h2>
+	<p>启动实例：</p>
+	<pre class="prettyprint linenums">$("#demo").iCalendar({
+    // 以下配置
+})</pre>
+
+	<h2>配置</h2>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 120px;">配置项</th>
+				<th style="width: 120px;">类型</th>
+				<th style="width: 120px;">初始值</th>
+				<th>说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>type</td>
+				<td>date/time/datetime</td>
+				<td>date</td>
+				<td>日历形式</td>
+			</tr>
+			<tr>
+				<td>placeholder</td>
+				<td>string</td>
+				<td>null</td>
+				<td>日期/时间 预设值，默认null表示当天 <br> type为date时的格式：yyyy-mm-dd<br> type为time时的格式：hh:mm:ss<br> type为datetime时的格式：yyyy-mm-dd hh:mm:ss</td>
+			</tr>
+			
+			<tr>
+				<td>targetTrigger</td>
+				<td>focus/click</td>
+				<td>focus</td>
+				<td>触发动作，不支持value属性的标签需要配置 'click'</td>
+			</tr>
+			<tr>
+				<td>dateSelectClose</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>type为date时是否选择后关闭日历</td>
+			</tr>
+			<tr>
+				<td>autoClose</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>触发非日历位置是否关闭日历</td>
+			</tr>
+			<tr>
+				<td>position</td>
+				<td>absolute/fixed</td>
+				<td>absolute</td>
+				<td>日历定位方式</td>
+			</tr>
+			<tr>
+				<td>container</td>
+				<td>string</td>
+				<td>body</td>
+				<td>提示信息Dom插入位置，默认为body下面，可设置显示在任意位置，如： <code>container: '#demoxx'</code></td>
+			</tr>
+			<tr>
+				<td>slideSpeed</td>
+				<td>number</td>
+				<td>200</td>
+				<td>日历左右滑动速度</td>
+			</tr>
+			<tr>
+				<td>zindex</td>
+				<td>number</td>
+				<td>1100</td>
+				<td>日历层级</td>
+			</tr>
+			<tr>
+				<td>event.refer</td>
+				<td>string | function</td>
+				<td>null</td>
+				<td>关闭实例后执行操作</td>
+			</tr>
+			<tr>
+				<td>event.init</td>
+				<td>string | function</td>
+				<td>null</td>
+				<td>初始化实例后的操作</td>
+			</tr>
+			<tr>
+				<td>event.date</td>
+				<td>string | function</td>
+				<td>null</td>
+				<td>触发日期时的操作</td>
+			</tr>
+			<tr>
+				<td>event.prev</td>
+				<td>string | function</td>
+				<td>null</td>
+				<td>上一月时的操作</td>
+			</tr>
+			<tr>
+				<td>event.next</td>
+				<td>string | function</td>
+				<td>null</td>
+				<td>下一月时的操作</td>
+			</tr>
+		</tbody>
+	</table>
+		
+	<h2>单日历</h2>
+	<div class="bs-docs-example">
+		<div class="calendar">
+			<div class="calendar-wrap">
+				<div class="calendar-inner">
+					<div class="calendar-item">
+						<h5>2012年4月</h5>
+						<ul class="calendar-weeks">
+							<li>日</li>
+							<li>一</li>
+							<li>二</li>
+							<li>三</li>
+							<li>四</li>
+							<li>五</li>
+							<li>六</li>
+						</ul>
+						<ul class="calendar-days">
+							<li class="blank"></li>
+							<li class="disabled">1</li>
+							<li class="disabled">2</li>
+							<li class="disabled">3</li>
+							<li class="today">今天</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li>8</li>
+							<li class="start">9</li>
+							<li class="select">10</li>
+							<li class="select">11</li>
+							<li class="select">12</li>
+							<li class="select">13</li>
+							<li class="select">14</li>
+							<li class="select">15</li>
+							<li class="select">16</li>
+							<li class="select">17</li>
+							<li class="end">18</li>
+							<li>19</li>
+							<li>20</li>
+							<li>21</li>
+							<li>22</li>
+							<li>23</li>
+							<li>24</li>
+							<li>25</li>
+							<li>26</li>
+							<li>27</li>
+							<li>28</li>
+							<li class="festival">劳动</li>
+							<li>30</li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<span class="calendar-prev">&lt;</span>
+			<span class="calendar-next">&gt;</span>
+			<span class="close calendar-close">&times;</span>
+		</div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="calendar"&gt;
+    &lt;div class="calendar-wrap"&gt;
+        &lt;div class="calendar-inner"&gt;
+            &lt;div class="calendar-item"&gt;
+                &lt;h5&gt;2012年4月&lt;/h5&gt;
+                &lt;ul class="calendar-weeks"&gt;
+                    &lt;li&gt;日&lt;/li&gt;
+                    &lt;li&gt;一&lt;/li&gt;
+                    &lt;li&gt;二&lt;/li&gt;
+                    &lt;li&gt;三&lt;/li&gt;
+                    &lt;li&gt;四&lt;/li&gt;
+                    &lt;li&gt;五&lt;/li&gt;
+                    &lt;li&gt;六&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul class="calendar-days"&gt;
+                    &lt;li class="blank"&gt;&lt;/li&gt;
+                    &lt;li class="disabled"&gt;1&lt;/li&gt;
+                    &lt;li class="disabled"&gt;2&lt;/li&gt;
+                    &lt;li class="disabled"&gt;3&lt;/li&gt;
+                    &lt;li class="today"&gt;今天&lt;/li&gt;
+                    &lt;li&gt;5&lt;/li&gt;
+                    &lt;li&gt;6&lt;/li&gt;
+                    &lt;li&gt;7&lt;/li&gt;
+                    &lt;li&gt;8&lt;/li&gt;
+                    &lt;li class="start"&gt;9&lt;/li&gt;
+                    &lt;li class="select"&gt;10&lt;/li&gt;
+                    &lt;li class="select"&gt;11&lt;/li&gt;
+                    &lt;li class="select"&gt;12&lt;/li&gt;
+                    &lt;li class="select"&gt;13&lt;/li&gt;
+                    &lt;li class="select"&gt;14&lt;/li&gt;
+                    &lt;li class="select"&gt;15&lt;/li&gt;
+                    &lt;li class="select"&gt;16&lt;/li&gt;
+                    &lt;li class="select"&gt;17&lt;/li&gt;
+                    &lt;li class="end"&gt;18&lt;/li&gt;
+                    &lt;li&gt;19&lt;/li&gt;
+                    &lt;li&gt;20&lt;/li&gt;
+                    &lt;li&gt;21&lt;/li&gt;
+                    &lt;li&gt;22&lt;/li&gt;
+                    &lt;li&gt;23&lt;/li&gt;
+                    &lt;li&gt;24&lt;/li&gt;
+                    &lt;li&gt;25&lt;/li&gt;
+                    &lt;li&gt;26&lt;/li&gt;
+                    &lt;li&gt;27&lt;/li&gt;
+                    &lt;li&gt;28&lt;/li&gt;
+                    &lt;li class="festival"&gt;劳动&lt;/li&gt;
+                    &lt;li&gt;30&lt;/li&gt;
+                    &lt;li class="blank"&gt;&lt;/li&gt;
+                    &lt;li class="blank"&gt;&lt;/li&gt;
+                    &lt;li class="blank"&gt;&lt;/li&gt;
+                    &lt;li class="blank"&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class="calendar-prev"&gt;&amp;lt;&lt;/span&gt;
+    &lt;span class="calendar-next"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="close calendar-close"&gt;&amp;times;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+	<h2>双日历</h2>
+	<div class="bs-docs-example">
+		<div class="calendar calendar-two">
+			<div class="calendar-wrap">
+				<div class="calendar-inner">
+					<div class="calendar-item">
+						<h5>2012年4月</h5>
+						<ul class="calendar-weeks">
+							<li>日</li>
+							<li>一</li>
+							<li>二</li>
+							<li>三</li>
+							<li>四</li>
+							<li>五</li>
+							<li>六</li>
+						</ul>
+						<ul class="calendar-days">
+							<li class="blank"></li>
+							<li class="disabled">1</li>
+							<li class="disabled">2</li>
+							<li class="disabled">3</li>
+							<li class="today">今天</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li>8</li>
+							<li>9</li>
+							<li>10</li>
+							<li>11</li>
+							<li>12</li>
+							<li>13</li>
+							<li>14</li>
+							<li>15</li>
+							<li>16</li>
+							<li>17</li>
+							<li>18</li>
+							<li>19</li>
+							<li>20</li>
+							<li>21</li>
+							<li>22</li>
+							<li>23</li>
+							<li>24</li>
+							<li>25</li>
+							<li>26</li>
+							<li>27</li>
+							<li>28</li>
+							<li>29</li>
+							<li>30</li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+						</ul>
+					</div>
+					<div class="calendar-item">
+						<h5>2012年5月</h5>
+						<ul class="calendar-weeks">
+							<li>日</li>
+							<li>一</li>
+							<li>二</li>
+							<li>三</li>
+							<li>四</li>
+							<li>五</li>
+							<li>六</li>
+						</ul>
+						<ul class="calendar-days">
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="festival">劳动</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li>8</li>
+							<li>9</li>
+							<li>10</li>
+							<li>11</li>
+							<li>12</li>
+							<li>13</li>
+							<li>14</li>
+							<li>15</li>
+							<li>16</li>
+							<li>17</li>
+							<li>18</li>
+							<li>19</li>
+							<li>20</li>
+							<li>21</li>
+							<li>22</li>
+							<li>23</li>
+							<li>24</li>
+							<li>25</li>
+							<li>26</li>
+							<li>27</li>
+							<li>28</li>
+							<li>29</li>
+							<li>30</li>
+							<li>31</li>
+							<li class="blank"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<span class="calendar-prev">&lt;</span>
+			<span class="calendar-next">&gt;</span>
+			<span class="close calendar-close">&times;</span>
+		</div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="calendar calendar-two"&gt;
+    &lt;div class="calendar-wrap"&gt;
+        &lt;div class="calendar-inner"&gt;
+            &lt;div class="calendar-item"&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div class="calendar-item"&gt;
+                ...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class="calendar-prev"&gt;&amp;lt;&lt;/span&gt;
+    &lt;span class="calendar-next"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="close calendar-close"&gt;&amp;times;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+	<h2>三日历</h2>
+	<div class="bs-docs-example">
+		<div class="calendar calendar-three">
+			<div class="calendar-wrap">
+				<div class="calendar-inner">
+					<div class="calendar-item">
+						<h5>2012年4月</h5>
+						<ul class="calendar-weeks">
+							<li>日</li>
+							<li>一</li>
+							<li>二</li>
+							<li>三</li>
+							<li>四</li>
+							<li>五</li>
+							<li>六</li>
+						</ul>
+						<ul class="calendar-days">
+							<li class="blank"></li>
+							<li class="disabled">1</li>
+							<li class="disabled">2</li>
+							<li class="disabled">3</li>
+							<li class="today">今天</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li>8</li>
+							<li>9</li>
+							<li>10</li>
+							<li>11</li>
+							<li>12</li>
+							<li>13</li>
+							<li>14</li>
+							<li>15</li>
+							<li>16</li>
+							<li>17</li>
+							<li>18</li>
+							<li>19</li>
+							<li>20</li>
+							<li>21</li>
+							<li>22</li>
+							<li>23</li>
+							<li>24</li>
+							<li>25</li>
+							<li>26</li>
+							<li>27</li>
+							<li>28</li>
+							<li>29</li>
+							<li>30</li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+						</ul>
+					</div>
+					<div class="calendar-item">
+						<h5>2012年5月</h5>
+						<ul class="calendar-weeks">
+							<li>日</li>
+							<li>一</li>
+							<li>二</li>
+							<li>三</li>
+							<li>四</li>
+							<li>五</li>
+							<li>六</li>
+						</ul>
+						<ul class="calendar-days">
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="festival">劳动</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li>8</li>
+							<li>9</li>
+							<li>10</li>
+							<li>11</li>
+							<li>12</li>
+							<li>13</li>
+							<li>14</li>
+							<li>15</li>
+							<li>16</li>
+							<li>17</li>
+							<li>18</li>
+							<li>19</li>
+							<li>20</li>
+							<li>21</li>
+							<li>22</li>
+							<li>23</li>
+							<li>24</li>
+							<li>25</li>
+							<li>26</li>
+							<li>27</li>
+							<li>28</li>
+							<li>29</li>
+							<li>30</li>
+							<li>31</li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+						</ul>
+					</div>
+					<div class="calendar-item">
+						<h5>2012年6月</h5>
+						<ul class="calendar-weeks">
+							<li>日</li>
+							<li>一</li>
+							<li>二</li>
+							<li>三</li>
+							<li>四</li>
+							<li>五</li>
+							<li>六</li>
+						</ul>
+						<ul class="calendar-days">
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li>8</li>
+							<li>9</li>
+							<li>10</li>
+							<li>11</li>
+							<li>12</li>
+							<li>13</li>
+							<li>14</li>
+							<li>15</li>
+							<li>16</li>
+							<li>17</li>
+							<li>18</li>
+							<li>19</li>
+							<li>20</li>
+							<li>21</li>
+							<li>22</li>
+							<li>23</li>
+							<li>24</li>
+							<li>25</li>
+							<li>26</li>
+							<li>27</li>
+							<li>28</li>
+							<li>29</li>
+							<li>30</li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+							<li class="blank"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<span class="calendar-prev">&lt;</span>
+			<span class="calendar-next">&gt;</span>
+			<span class="close calendar-close">&times;</span>
+		</div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="calendar calendar-three"&gt;
+    &lt;div class="calendar-wrap"&gt;
+        &lt;div class="calendar-inner"&gt;
+            &lt;div class="calendar-item"&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div class="calendar-item"&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div class="calendar-item"&gt;
+                ...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class="calendar-prev"&gt;&amp;lt;&lt;/span&gt;
+    &lt;span class="calendar-next"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="close calendar-close"&gt;&amp;times;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+</section>

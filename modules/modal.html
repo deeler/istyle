@@ -1,0 +1,194 @@
+<section id="buttons">
+	<div class="page-header">
+		<h1>弹出层</h1>
+	</div>
+	<h2>样式</h2>
+	<div class="bs-docs-example" style="background-color: #f5f5f5;">
+		<div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+			<div class="modal-header">
+				<button type="button" class="close">×</button>
+				<h3>站内警告</h3>
+			</div>
+			<div class="modal-body">
+				<p>您确定删除此优惠商品吗？</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-primary">确定删除</a>
+				<a href="#" class="btn">取消</a>
+			</div>
+		</div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="modal hide fade"&gt;
+    &lt;div class="modal-header"&gt;
+        &lt;button type="button" class="close" data-dismiss="modal"&gt;&times;&lt;/button&gt;
+        &lt;h3&gt;站内警告：&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+        &lt;p&gt;您确定删除此优惠商品吗？&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+        &lt;a href="#" class="btn"&gt;取消&lt;/a&gt;
+        &lt;a href="#" class="btn btn-primary" data-dismiss="modal"&gt;确定删除&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+	<h2>实例</h2>
+	<div class="bs-docs-example bs-modal">
+		<button class="btn btn-primary" data-toggle="modal" href="#myModal">点击查看</button>
+		<div class="modal hide fade" id="myModal">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h3>站内警告</h3>
+			</div>
+			<div class="modal-body">
+				<p>您确定删除此优惠商品吗？</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-primary">确定删除</a>
+				<a href="#" class="btn" data-dismiss="modal">取消</a>
+			</div>
+		</div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;button class="btn btn-primary" data-toggle="modal" href="#myModal"&gt;点击查看&lt;/button&gt;
+&lt;div class="modal hide fade" id="myModal"&gt;
+    ...
+&lt;/div&gt;
+</pre>
+
+	<h2>用法</h2>
+
+	<p>
+		使用任意标签data属性
+		<code>data-toggle="modal"</code>
+		和
+		<code>data-target="#foo"</code>
+		/
+		<code>href="#foo"</code>
+		来启动一个弹层
+	</p>
+	<pre class="prettyprint linenums">&lt;button type="button" data-toggle="modal" data-target="#oneModal"&gt;启动弹层&lt;/button&gt;</pre>
+
+	<p>
+		你也可以使用JS来启动：
+	</p>
+	<pre class="prettyprint linenums">$('#myModal').modal(options)</pre>
+
+	<h2>配置</h2>
+	<p>
+		配置项可以是HTML属性，也可JS设置，如：
+		<code>data-backdrop="true"</code>
+		或
+		<code>backdrop: true</code>
+	</p>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 120px;">配置项</th>
+				<th style="width: 120px;">类型</th>
+				<th style="width: 120px;">初始值</th>
+				<th>说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>backdrop</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>
+					点击背景时是否关闭弹层
+					<br>
+					为 <code>true</code> 则显示背景，且点击背景关闭
+					为 <code>false</code> 则不显示背景
+				</td>
+			</tr>
+			<tr>
+				<td>keyboard</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>使用按键关闭实例</td>
+			</tr>
+			<tr>
+				<td>show</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>初始化实例</td>
+			</tr>
+			<tr>
+				<td>remote</td>
+				<td>path</td>
+				<td>false</td>
+				<td>
+					<p>Ajax数据内容，
+						如果需要Ajax Load数据，使用
+						<code>href=""</code>
+					</p>
+					<pre class="prettyprint linenums"><code>&lt;a data-toggle="modal" href="remote.html" data-target="#modal"&gt;click me&lt;/a&gt;</code></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<h2>方法</h2>
+	<h4><code>.modal(options)</code></h4>
+	<pre class="prettyprint linenums">
+$('#myModal').modal({
+    keyboard: false
+})
+</pre>
+
+	<h4>.modal('toggle')</h4>
+	<p>显示/隐藏</p>
+	<pre class="prettyprint linenums">$('#myModal').modal('toggle')</pre>
+	<h4>.modal('show')</h4>
+	<p>显示</p>
+	<pre class="prettyprint linenums">$('#myModal').modal('show')</pre>
+	<h4>.modal('hide')</h4>
+	<p>隐藏</p>
+	<pre class="prettyprint linenums">$('#myModal').modal('hide')</pre>
+
+
+	<h2>事件</h2>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 120px;">事件</th>
+				<th>说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>show</td>
+				<td>
+					启动实例
+				</td>
+			</tr>
+			<tr>
+				<td>shown</td>
+				<td>
+					实例触发的时候执行xxx
+				</td>
+			</tr>
+			<tr>
+				<td>hide</td>
+				<td>
+					隐藏实例
+				</td>
+			</tr>
+			<tr>
+				<td>hidden</td>
+				<td>
+					实例触发的时候隐藏xxx
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<pre class="prettyprint linenums">
+$('#myModal').on('hidden', function () {
+    
+})
+</pre>
+</section>

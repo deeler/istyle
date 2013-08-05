@@ -1,0 +1,620 @@
+<section id="forms">
+	<div class="page-header">
+		<h1>表单</h1>
+	</div>
+	<h2>文本框</h2>
+	<p>
+		input有很多type属性，如: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, color.
+	</p>
+	
+	<form class="bs-docs-example form-inline">
+		<input type="text" placeholder="写点什么">
+	</form>
+	<pre class="prettyprint linenums">&lt;input type="text" placeholder="写点什么"&gt;</pre>
+
+	<h2>文本域</h2>
+	<p>
+		通过改变
+		<code>rows</code>
+		来控制Textarea高度
+	</p>
+	<form class="bs-docs-example form-inline">
+		<textarea rows="3"></textarea>
+	</form>
+	<pre class="prettyprint linenums">&lt;textarea rows="3"&gt;&lt;/textarea&gt;</pre>
+
+	<h2>单选和复选</h2>
+
+	<form class="bs-docs-example">
+		<label class="checkbox">
+			<input type="checkbox" value="">
+			索要机票订单发票
+		</label>
+		<br>
+		<label class="radio">
+			<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+			这是单选，你只能选一个
+		</label>
+		<label class="radio">
+			<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+			上面说的对，你只能选一个
+		</label>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;label class="checkbox"&gt;
+	&lt;input type="checkbox" value=""&gt;
+	索要机票订单发票
+&lt;/label&gt;
+
+&lt;label class="radio"&gt;
+	&lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+	这是单选，你只能选一个
+&lt;/label&gt;
+&lt;label class="radio"&gt;
+	&lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+	上面说的对，你只能选一个
+&lt;/label&gt;
+</pre>
+
+	<h3>水平排列</h3>
+	<form class="bs-docs-example">
+		<label class="checkbox inline">
+			<input type="checkbox" id="inlineCheckbox1" value="option1">1</label>
+		<label class="checkbox inline">
+			<input type="checkbox" id="inlineCheckbox2" value="option2">2</label>
+		<label class="checkbox inline">
+			<input type="checkbox" id="inlineCheckbox3" value="option3">3</label>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;label class="checkbox inline"&gt;
+	&lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt; 1
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+	&lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt; 2
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+	&lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt; 3
+&lt;/label&gt;
+</pre>
+
+	<h2>选择框</h2>
+	<form class="bs-docs-example">
+		<select>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+		<br>
+		<select multiple="multiple">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;select&gt;
+	&lt;option&gt;1&lt;/option&gt;
+	&lt;option&gt;2&lt;/option&gt;
+	&lt;option&gt;3&lt;/option&gt;
+	&lt;option&gt;4&lt;/option&gt;
+	&lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select multiple="multiple"&gt;
+	&lt;option&gt;1&lt;/option&gt;
+	&lt;option&gt;2&lt;/option&gt;
+	&lt;option&gt;3&lt;/option&gt;
+	&lt;option&gt;4&lt;/option&gt;
+	&lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+	<h2>各种表单尺寸</h2>
+	<form class="bs-docs-example" style="padding-bottom: 15px;">
+		<input class="input-mini" type="text" placeholder=".input-mini">
+		<input class="input-medium" type="text" placeholder=".input-medium">
+		<input type="text">
+		<input class="input-large" type="text" placeholder=".input-large">
+		<br>
+		<textarea class="input-mini" placeholder=".input-mini"></textarea>
+		<textarea class="input-medium" placeholder=".input-medium"></textarea>
+		<textarea></textarea>
+		<textarea class="input-large" placeholder=".input-large"></textarea>
+		<br>
+		<select class="input-mini">
+			<option>1</option>
+		</select>
+		<select class="input-medium">
+			<option>1</option>
+		</select>
+		<select>
+			<option>1</option>
+		</select>
+		<select class="input-large">
+			<option>1</option>
+		</select>
+		
+		<input class="input-block-level" type="text" placeholder=".input-block-level">
+		<textarea class="input-block-level" placeholder=".input-block-level"></textarea>
+		<select class="input-block-level">
+			<option>1</option>
+		</select>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;input class="input-mini" type="text" placeholder=".input-mini"&gt;
+&lt;input class="input-medium" type="text" placeholder=".input-medium"&gt;
+&lt;input type="text"&gt;
+&lt;input class="input-large" type="text" placeholder=".input-large"&gt;
+
+&lt;textarea class="input-mini" placeholder=".input-mini"&gt;&lt;/textarea&gt;
+&lt;textarea class="input-medium" placeholder=".input-medium"&gt;&lt;/textarea&gt;
+&lt;textarea&gt;&lt;/textarea&gt;
+&lt;textarea class="input-large" placeholder=".input-large"&gt;&lt;/textarea&gt;
+
+&lt;select class="input-mini"&gt;
+	&lt;option&gt;1&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class="input-medium"&gt;
+	&lt;option&gt;1&lt;/option&gt;
+&lt;/select&gt;
+&lt;select&gt;
+	&lt;option&gt;1&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class="input-large"&gt;
+	&lt;option&gt;1&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;input class="input-block-level" type="text" placeholder=".input-block-level"&gt;
+&lt;textarea class="input-block-level" placeholder=".input-block-level"&gt;&lt;/textarea&gt;
+&lt;select class="input-block-level"&gt;
+	&lt;option&gt;1&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+
+	<h2>不可编辑状态</h2>
+	<form class="bs-docs-example">
+		<span class="uneditable-input">Some value here</span>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;span class="input-xlarge uneditable-input"&gt;Some value here&lt;/span&gt;
+</pre>
+
+	<h2>不可操作状态</h2>
+	<form class="bs-docs-example form-inline">
+		<input id="disabledInput" type="text" placeholder="Disabled input here…" disabled></form>
+	<pre class="prettyprint linenums">
+&lt;input id="disabledInput" type="text" placeholder="Disabled input here..." disabled&gt;
+</pre>
+
+	<h2>表单操作区域</h2>
+	<form class="bs-docs-example">
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary">Save changes</button>
+			<button type="button" class="btn">Cancel</button>
+		</div>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;div class="form-actions"&gt;
+	&lt;button type="submit" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+	&lt;button type="button" class="btn"&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+	<h2>表单提示文本</h2>
+	<form class="bs-docs-example form-inline">
+		<input type="text">
+		<span class="help-inline">name不能为空</span>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;input type="text"&gt;&lt;span class="help-inline"&gt;name不能为空&lt;/span&gt;
+</pre>
+
+	<form class="bs-docs-example form-inline">
+		<input type="text">
+		<span class="help-block">
+			如果你有一大块提示文本，可以显示在这里
+		</span>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;input type="text"&gt;&lt;span class="help-block"&gt;如果你有一大块提示文本，可以显示在这里&lt;/span&gt;
+</pre>
+
+
+	<h2>表单校验状态</h2>
+
+	<form class="bs-docs-example form-horizontal">
+		<div class="control-group warning">
+			<label class="control-label" for="inputWarning">Input with warning</label>
+			<div class="controls">
+				<input type="text" id="inputWarning">
+				<span class="help-inline">Something may have gone wrong</span>
+			</div>
+		</div>
+		<div class="control-group error">
+			<label class="control-label" for="inputError">Input with error</label>
+			<div class="controls">
+				<input type="text" id="inputError">
+				<span class="help-inline">Please correct the error</span>
+			</div>
+		</div>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;div class="control-group warning"&gt;
+	&lt;label class="control-label" for="inputWarning"&gt;Input with warning&lt;/label&gt;
+	&lt;div class="controls"&gt;
+		&lt;input type="text" id="inputWarning"&gt;
+		&lt;span class="help-inline"&gt;Something may have gone wrong&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="control-group error"&gt;
+	&lt;label class="control-label" for="inputError"&gt;Input with error&lt;/label&gt;
+	&lt;div class="controls"&gt;
+		&lt;input type="text" id="inputError"&gt;
+		&lt;span class="help-inline"&gt;Please correct the error&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+	<h3>浏览器自带表单验证</h3>
+	添加 <code>required</code> 就能利用浏览器自带的表单验证
+	<form class="bs-docs-example form-inline">
+		<input type="email" placeholder="test@example.com" required></form>
+	<pre class="prettyprint linenums">&lt;input type="email" required&gt;</pre>
+
+
+	<h2>文本框前缀和后缀</h2>
+
+	<form class="bs-docs-example">
+		<div class="input-prepend">
+			<span class="add-on">@</span>
+			<input id="prependedInput" type="text" placeholder="Username"></div>
+		<br>
+		<div class="input-append">
+			<input id="appendedInput" type="text">
+			<span class="add-on">.00</span>
+		</div>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;div class="input-prepend"&gt;
+	&lt;span class="add-on"&gt;@&lt;/span&gt;
+	&lt;input id="prependedInput" type="text" placeholder="Username"&gt;
+&lt;/div&gt;
+&lt;div class="input-append"&gt;
+	&lt;input id="appendedInput" type="text"&gt;
+	&lt;span class="add-on"&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+	<form class="bs-docs-example form-inline">
+		<div class="input-prepend input-append">
+			<span class="add-on">$</span>
+			<input id="appendedPrependedInput" type="text">
+			<span class="add-on">.00</span>
+		</div>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;div class="input-prepend input-append"&gt;
+	&lt;span class="add-on"&gt;$&lt;/span&gt;
+	&lt;input id="appendedPrependedInput" type="text"&gt;
+	&lt;span class="add-on"&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+	<h2>文本框和按钮组合</h2>
+	<form class="bs-docs-example">
+		<div class="input-append">
+			<input id="appendedInputButton" type="text">
+			<button class="btn" type="button">Go!</button>
+		</div>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;div class="input-append"&gt;
+	&lt;input id="appendedInputButton" type="text"&gt;
+	&lt;button class="btn" type="button"&gt;Go!&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+	<form class="bs-docs-example">
+		<div class="input-append">
+			<input id="appendedInputButtons" type="text">
+			<button class="btn" type="button">Search</button>
+			<button class="btn" type="button">Options</button>
+		</div>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;div class="input-append"&gt;
+	&lt;input id="appendedInputButtons" type="text"&gt;
+	&lt;button class="btn" type="button"&gt;Search&lt;/button&gt;
+	&lt;button class="btn" type="button"&gt;Options&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+	<form class="bs-docs-example">
+		<div class="input-append">
+			<input id="appendedDropdownButton" type="text">
+			<div class="btn-group">
+				<button class="btn dropdown-toggle" data-toggle="dropdown">
+					Action
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">Action</a>
+					</li>
+					<li>
+						<a href="#">Another action</a>
+					</li>
+					<li>
+						<a href="#">Something else here</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Separated link</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /btn-group -->
+		</div>
+		<!-- /input-append -->
+	</form>
+	<pre class="prettyprint linenums">
+&lt;div class="input-append"&gt;
+	&lt;input id="appendedDropdownButton" type="text"&gt;
+	&lt;div class="btn-group"&gt;
+		&lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+			Action
+			&lt;span class="caret"&gt;&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;ul class="dropdown-menu"&gt;
+			...
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+	<form class="bs-docs-example">
+		<div class="input-prepend">
+			<div class="btn-group">
+				<button class="btn dropdown-toggle" data-toggle="dropdown">
+					Action
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">Action</a>
+					</li>
+					<li>
+						<a href="#">Another action</a>
+					</li>
+					<li>
+						<a href="#">Something else here</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Separated link</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /btn-group -->
+			<input id="prependedDropdownButton" type="text"></div>
+		<!-- /input-prepend -->
+	</form>
+	<pre class="prettyprint linenums">
+&lt;div class="input-prepend"&gt;
+	&lt;div class="btn-group"&gt;
+		&lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+			Action
+			&lt;span class="caret"&gt;&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;ul class="dropdown-menu"&gt;
+			...
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;input id="prependedDropdownButton" type="text"&gt;
+&lt;/div&gt;
+</pre>
+
+	<form class="bs-docs-example">
+		<div class="input-prepend input-append">
+			<div class="btn-group">
+				<button class="btn dropdown-toggle" data-toggle="dropdown">
+					Action
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">Action</a>
+					</li>
+					<li>
+						<a href="#">Another action</a>
+					</li>
+					<li>
+						<a href="#">Something else here</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Separated link</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /btn-group -->
+			<input id="appendedPrependedDropdownButton" type="text">
+			<div class="btn-group">
+				<button class="btn dropdown-toggle" data-toggle="dropdown">
+					Action
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">Action</a>
+					</li>
+					<li>
+						<a href="#">Another action</a>
+					</li>
+					<li>
+						<a href="#">Something else here</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Separated link</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /btn-group -->
+		</div>
+		<!-- /input-prepend input-append -->
+	</form>
+	<pre class="prettyprint linenums">
+&lt;div class="input-prepend input-append"&gt;
+	&lt;div class="btn-group"&gt;
+		&lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+			Action
+			&lt;span class="caret"&gt;&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;ul class="dropdown-menu"&gt;
+			...
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;input id="appendedPrependedDropdownButton" type="text"&gt;
+	&lt;div class="btn-group"&gt;
+		&lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+			Action
+			&lt;span class="caret"&gt;&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;ul class="dropdown-menu"&gt;
+			...
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+	<form class="bs-docs-example">
+		<div class="input-prepend">
+			<div class="btn-group">
+				<button class="btn" tabindex="-1">Action</button>
+				<button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">Action</a>
+					</li>
+					<li>
+						<a href="#">Another action</a>
+					</li>
+					<li>
+						<a href="#">Something else here</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Separated link</a>
+					</li>
+				</ul>
+			</div>
+			<input type="text"></div>
+		<div class="input-append">
+			<input type="text">
+			<div class="btn-group">
+				<button class="btn" tabindex="-1">Action</button>
+				<button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">Action</a>
+					</li>
+					<li>
+						<a href="#">Another action</a>
+					</li>
+					<li>
+						<a href="#">Something else here</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">Separated link</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;form&gt;
+	&lt;div class="input-prepend"&gt;
+		&lt;div class="btn-group"&gt;...&lt;/div&gt;
+		&lt;input type="text"&gt;
+	&lt;/div&gt;
+	&lt;div class="input-append"&gt;
+		&lt;input type="text"&gt;
+		&lt;div class="btn-group"&gt;...&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+	<h2>[模块] 水平表单</h2>
+	<form class="bs-docs-example form-inline">
+		<input class="input-medium" type="text" placeholder="用户名">
+		<input class="input-medium" type="password" placeholder="密码">
+		<label class="checkbox inline">
+			<input type="checkbox">记住登录状态</label>
+		<button type="submit" class="btn">登录</button>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;form class="form-inline"&gt;
+	&lt;input type="text" placeholder="Email"&gt;
+	&lt;input type="password" placeholder="Password"&gt;
+	&lt;label class="checkbox"&gt;
+		&lt;input type="checkbox"&gt; Remember me
+	&lt;/label&gt;
+	&lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+	<h2>[模块] 垂直表单</h2>
+	<form class="bs-docs-example form-horizontal">
+		<div class="control-group">
+			<label class="control-label" for="inputEmail">用户名</label>
+			<div class="controls">
+				<input type="text" id="inputEmail" placeholder="用户名"></div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">密码</label>
+			<div class="controls">
+				<input type="password" id="inputPassword" placeholder="密码"></div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<label class="checkbox">
+					<input type="checkbox">记住我的登录状态</label>
+				<button type="submit" class="btn btn-primary">登录</button>
+			</div>
+		</div>
+	</form>
+	<pre class="prettyprint linenums">
+&lt;form class="form-horizontal"&gt;
+	&lt;div class="control-group"&gt;
+		&lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
+		&lt;div class="controls"&gt;
+			&lt;input type="text" id="inputEmail" placeholder="Email"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="control-group"&gt;
+		&lt;label class="control-label" for="inputPassword"&gt;Password&lt;/label&gt;
+		&lt;div class="controls"&gt;
+			&lt;input type="password" id="inputPassword" placeholder="Password"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="control-group"&gt;
+		&lt;div class="controls"&gt;
+			&lt;label class="checkbox"&gt;
+				&lt;input type="checkbox"&gt; Remember me
+			&lt;/label&gt;
+			&lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+</section>

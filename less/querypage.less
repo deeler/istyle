@@ -1,0 +1,135 @@
+.querypage{
+	padding: 10px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	font-size: 12px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+.querypage:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: -7px;
+  left: 9px;
+}
+.querypage:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  position: absolute;
+  top: -6px;
+  left: 10px;
+}
+
+.querypage-content{
+	padding: 0 0 0 120px;
+	width: 440px;
+	overflow: hidden;
+}
+.querypage-channel{
+	padding: 0;
+	margin: 0; 
+	list-style: none;
+	color: #666;
+	float: left;
+	margin-left: -120px;
+	width: 120px;
+	background-color: #f6f6f6;
+}
+.querypage-channel li{
+	padding: 5px 10px 4px;
+	cursor: pointer;
+	border-left: 3px solid #f6f6f6;
+}
+.querypage-channel li.active,
+.querypage-channel li:hover{
+	background-color: #e6e6e6;
+	color: #444;
+	border-left-color: #368EE0
+}
+
+.querypage-page{
+	list-style: none;
+	padding: 0;
+	margin: 0 0 0 5px;
+	height: 666px;
+	overflow: auto;
+	background-color: #fff;
+	position: relative;
+	z-index: 2
+}
+.querypage-page h4{
+	margin-top:0;padding:5px 0 4px 10px;background-color:#E6E6E6;
+}
+.querypage-page ul{
+	margin-bottom:10px;
+}
+.querypage-page .pagenull{
+	padding: 20px;
+	color: #666;
+	text-align: center
+
+}
+.querypage-page li{
+	padding: 7px 10px;
+	cursor: pointer;
+	border-bottom: 1px solid #eee;
+}
+.querypage-page li.active,
+.querypage-page li:hover{
+	background-color: #368EE0;
+	color: #fff;
+}
+.querypage-page li.active small,
+.querypage-page li:hover small,
+.querypage-page li.active p,
+.querypage-page li:hover p{
+	color: #eee;
+}
+.querypage-page li b{
+	overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+
+.querypage-page small{
+	float: right;
+	color: #999;
+}
+
+.querypage-page p{
+	margin-bottom: 0;
+	color: #999;
+	overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+
+
+.querypage-page::-webkit-scrollbar-track-piece{  
+    background-color:#fff;  
+    -webkit-border-radius:0;  
+}  
+.querypage-page::-webkit-scrollbar{  
+    width:7px;  
+    height:8px;  
+}  
+.querypage-page::-webkit-scrollbar-thumb{  
+    height:50px;  
+    background-color:#bbb;  
+    outline:2px solid #fff;  
+    outline-offset:-2px;  
+    border: 2px solid #fff;  
+}  
+.querypage-page::-webkit-scrollbar-thumb:hover{  
+    height:50px;  
+    background-color:#9f9f9f;
+}

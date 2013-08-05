@@ -1,0 +1,167 @@
+<section id="navs">
+	<div class="page-header">
+		<h1>导航</h1>
+	</div>
+	<style>
+	.bs-navbar-skin{overflow:hidden;float: right;margin-top: -30px;list-style: none}
+	.bs-navbar-skin li{width: 20px;height: 20px;float: left;margin-left: 2px;}
+	</style>
+	<script>
+	$(function(){
+		$('.bs-navbar-skin li').each(function(e){
+			$(this).mouseover(function(){
+				$('.navbar:first').attr('class',$(this).attr('skin'));
+				$('.prettyprint:first .L0:first .atv:first').html('"'+$(this).attr('skin')+'"');
+			});
+		});
+		$('.bs-navbar').each(function(e){
+			$(this).click(function(){
+				$('.bs-docs-example .navbar').attr('class',$(this).attr('data'));
+			});
+		});
+	});
+	</script>
+	<h2>基本样式</h2>
+	
+	<ul class="bs-navbar-skin">
+		<li style="width:auto;margin-right:5px;" skin="navbar"><b>选择颜色：</b></li>
+		<li style="background-color:#368EE0;" skin="navbar"></li>
+		<li style="background-color:#56AF45;" skin="navbar navbar-satgreen"></li>
+		<li style="background-color:#A200FF;" skin="navbar navbar-magenta"></li>
+		<li style="background-color:#E63A3A;" skin="navbar navbar-red"></li>
+		<li style="background-color:#F8A31F;" skin="navbar navbar-orange"></li>
+		<li style="background-color:#00ABA9;" skin="navbar navbar-teal"></li>
+		<li style="background-color:#A05000;" skin="navbar navbar-brown"></li>
+		<li style="background-color:#339933;" skin="navbar navbar-green"></li>
+		<li style="background-color:#FF4497;" skin="navbar navbar-purple"></li>
+		<li style="background-color:#2C5E7B;" skin="navbar navbar-satblue"></li>
+		<li style="background-color:#ff6600;" skin="navbar navbar-satorange"></li>
+	</ul>
+	<div class="bs-docs-example">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="logo" href="#">站点标题</a>
+				<ul class="nav">
+					<li class="active">
+						<a href="#">首页</a>
+					</li>
+					<li>
+						<a href="#">新闻中心</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							关于我们 <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">企业文化</a>
+							</li>
+							<li>
+								<a href="#">总裁致辞</a>
+							</li>
+							<li>
+								<a href="#">发展历程</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form pull-left" action="">
+					<span class="input-append">
+						<input type="text" class="span2" placeholder="搜索什么">
+						<input class="btn btn-primary" type="submit" value="搜索">
+					</span>
+				</form>
+				<ul class="nav pull-right">
+					<li>
+						<a href="#">购物车</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							会员中心 <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">修改资料</a>
+							</li>
+							<li>
+								<a href="#">重置密码</a>
+							</li>
+							<li>
+								<a href="#">站内信</a>
+							</li>
+							<li class="divider"></li>
+							<li class="nav-header">特别推荐</li>
+							<li>
+								<a href="#">优惠大放送</a>
+							</li>
+							<li>
+								<a href="#">最新消息</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="navbar"&gt;
+    &lt;div class="navbar-inner"&gt;
+        &lt;a class="logo" href="#"&gt;Site Logo&lt;/a&gt;
+        &lt;ul class="nav"&gt;
+            &lt;li class="active"&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;新闻中心&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="dropdown"&gt;
+                &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Dropdown &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+                &lt;ul class="dropdown-menu"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;企业文化&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;总裁致辞&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;发展历程&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;form class="navbar-form pull-left" action=""&gt;
+            &lt;span class="input-append"&gt;
+                &lt;input type="text" class="span2" placeholder="搜索什么"&gt;
+                &lt;input class="btn btn-primary" type="submit" value="搜索"&gt;
+            &lt;/span&gt;
+        &lt;/form&gt;
+        &lt;ul class="nav pull-right"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;购物车&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="dropdown"&gt;
+                &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Dropdown &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+                &lt;ul class="dropdown-menu"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;重置密码&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;站内信&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="divider"&gt;&lt;/li&gt;
+                    &lt;li class="nav-header"&gt;特别推荐&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;优惠大放送&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;最新消息&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+	
+	<h2>固定在顶部</h2>
+	<div class="bs-docs-example">
+		<button data="navbar navbar-fixed-top" class="btn bs-navbar">点击查看</button>
+	</div>
+		<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-fixed-top"&gt;
+    ...
+&lt;/div&gt;
+</pre>
+	
+	<h2>固定在底部</h2>
+	<div class="bs-docs-example">
+		<button data="navbar navbar-fixed-bottom" class="btn bs-navbar">点击查看</button>
+	</div>
+		<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-fixed-bottom"&gt;
+    ...
+&lt;/div&gt;
+</pre>
+
+</section>

@@ -1,0 +1,182 @@
+<section id="popover">
+	<div class="page-header">
+		<h1>浮出层</h1>
+	</div>
+
+	<h2>样式</h2>
+	<div class="bs-docs-example bs-docs-popover-example" style="overflow:hidden;">
+		<div class="popover top">
+			<div class="arrow"></div>
+			<h3 class="popover-title">确定删除？</h3>
+			<div class="popover-content">
+				<p>此操作存在会员信息曝光的风险，请确认无误后删除！</p>
+			</div>
+		</div>
+
+		<div class="popover right">
+			<div class="arrow"></div>
+			<h3 class="popover-title">确定删除？</h3>
+			<div class="popover-content">
+				<p>此操作存在会员信息曝光的风险，请确认无误后删除！</p>
+			</div>
+		</div>
+
+		<div class="popover bottom">
+			<div class="arrow"></div>
+			<h3 class="popover-title">确定删除？</h3>
+			<div class="popover-content">
+				<p>此操作存在会员信息曝光的风险，请确认无误后删除！</p>
+			</div>
+		</div>
+
+		<div class="popover left">
+			<div class="arrow"></div>
+			<h3 class="popover-title">确定删除？</h3>
+			<div class="popover-content">
+				<p>此操作存在会员信息曝光的风险，请确认无误后删除！</p>
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+	<pre class="prettyprint linenums">
+&lt;div class="popover top"&gt;
+    &lt;div class="arrow"&gt;&lt;/div&gt;
+    &lt;h3 class="popover-title"&gt;Popover top&lt;/h3&gt;
+    &lt;div class="popover-content"&gt;
+        &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="popover right"&gt;&lt;/div&gt;
+&lt;div class="popover bottom"&gt;&lt;/div&gt;
+&lt;div class="popover left"&gt;&lt;/div&gt;
+</pre>
+
+	<h2>实例</h2>
+	<div class="bs-docs-example bs-docs-popover-example2">
+		<a href="javascript:;" class="btn" data-toggle="popover" data-placement="top" data-content="此操作存在会员信息曝光的风险，请确认无误后删除！" title="Popover on top">Popover on top</a>
+		<a href="javascript:;" class="btn" data-toggle="popover" data-placement="right" data-content="此操作存在会员信息曝光的风险，请确认无误后删除！" title="Popover on right">Popover on right</a>
+		<a href="javascript:;" class="btn" data-toggle="popover" data-placement="bottom" data-content="此操作存在会员信息曝光的风险，请确认无误后删除！" title="Popover on bottom">Popover on bottom</a>
+		<a href="javascript:;" class="btn" data-toggle="popover" data-placement="left" data-content="此操作存在会员信息曝光的风险，请确认无误后删除！" title="Popover on left">Popover on left</a>
+	</div>	
+	<pre class="prettyprint linenums">
+&lt;a href="javascript:;" class="btn" data-toggle="popover" data-placement="top" data-content="此操作存在会员信息曝光的风险，请确认无误后删除！" title="Popover on top"&gt;Popover on top&lt;/a&gt;
+
+&lt;a href="javascript:;" class="btn" data-toggle="popover" data-placement="right" data-content="此操作存在会员信息曝光的风险，请确认无误后删除！" title="Popover on right"&gt;Popover on right&lt;/a&gt;
+
+&lt;a href="javascript:;" class="btn" data-toggle="popover" data-placement="bottom" data-content="此操作存在会员信息曝光的风险，请确认无误后删除！" title="Popover on bottom"&gt;Popover on bottom&lt;/a&gt;
+
+&lt;a href="javascript:;" class="btn" data-toggle="popover" data-placement="left" data-content="此操作存在会员信息曝光的风险，请确认无误后删除！" title="Popover on left"&gt;Popover on left&lt;/a&gt;
+</pre>
+
+	<h2>用法</h2>
+	<p>
+		<span class="label label-info">注意！</span> 使用浮出层的JS需要先引入提示信息的JS！
+	</p>
+	<pre class="prettyprint linenums">$('#example').popover(options)</pre>
+	<p>
+		配置项可以是HTML属性，也可JS设置，如： <code>data-animation="true"</code> 或 <code>animation: true</code>
+		<br>
+		HTML属性需要添加 <code>data-</code> 头
+		，如 <code>data-animation=""</code>
+	</p>
+	<hr>
+
+	<h2>配置</h2>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 120px;">配置项</th>
+				<th style="width: 120px;">类型</th>
+				<th style="width: 120px;">初始值</th>
+				<th>说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>animation</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>是否使用css fade动画</td>
+			</tr>
+			<tr>
+				<td>html</td>
+				<td>boolean</td>
+				<td>false</td>
+				<td>
+					提示内容是否解析HTML，默认以文本方式解析
+				</td>
+			</tr>
+			<tr>
+				<td>placement</td>
+				<td>string | function</td>
+				<td>'right'</td>
+				<td>显示位置 - top | bottom | left | right</td>
+			</tr>
+			<tr>
+				<td>selector</td>
+				<td>string</td>
+				<td>false</td>
+				<td>
+					指定Target下的操作目标，默认是Target本身
+				</td>
+			</tr>
+			<tr>
+				<td>trigger</td>
+				<td>string</td>
+				<td>'click'</td>
+				<td>
+					提示操作方式 - click | hover | focus | manual
+				</td>
+			</tr>
+			<tr>
+				<td>title</td>
+				<td>string | function</td>
+				<td>''</td>
+				<td>显示内容，如果不存在则取标签 <code>title</code> 内容</td>
+			</tr>
+			<tr>
+				<td>content</td>
+				<td>string | function</td>
+				<td>''</td>
+				<td>初始显示内容</td>
+			</tr>
+			<tr>
+				<td>delay</td>
+				<td>number | object</td>
+				<td>0</td>
+				<td>
+					提示信息延迟时间，可分别设置显示和隐藏延迟，如下：<code>delay: { show: 500, hide: 100 }</code>
+				</td>
+			</tr>
+			<tr>
+				<td>container</td>
+				<td>string | false</td>
+				<td>false</td>
+				<td>
+					提示信息Dom插入位置，默认为Target下面，可设置显示在任意位置，如：<code>container: 'body'</code>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>方法</h2>
+	<h3><code>$(target).popover(options)</code></h3>
+	<h4>.popover('show')</h4>
+	<p>显示</p>
+	<pre class="prettyprint linenums">$(target).popover('show')</pre>
+	<h4>.popover('hide')</h4>
+	<p>隐藏</p>
+	<pre class="prettyprint linenums">$(target).popover('hide')</pre>
+	<h4>.popover('toggle')</h4>
+	<p>显示/隐藏</p>
+	<pre class="prettyprint linenums">$(target).popover('toggle')</pre>
+	<h4>.popover('destroy')</h4>
+	<p>隐藏并销毁</p>
+	<pre class="prettyprint linenums">$(target).popover('destroy')</pre>
+
+</section>
+
+<script>
+$('.bs-docs-popover-example2 a').popover();
+</script>
